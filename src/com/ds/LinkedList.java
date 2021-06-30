@@ -9,7 +9,7 @@ public class LinkedList {
 
 		public Node(int data) {
 			this.data = data;
-		  //this.next = null;   by default object value is null
+			//this.next = null;   by default object value is null
 		}
 	}
 
@@ -49,14 +49,26 @@ public class LinkedList {
 		if (prevNode == null) {
 			System.out.println("Prev Node should not be null");
 			return;
-			}
-			//56 ->70
-			//56 -> 30 -> 70
-			Node newNode = new Node(value);
-			newNode.next = prevNode.next;
-			prevNode.next = newNode;
+		}
+		//56 ->70
+		//56 -> 30 -> 70
+		Node newNode = new Node(value);
+		newNode.next = prevNode.next;
+		prevNode.next = newNode;
 
-			print();
+		print();
+
+	}
+
+	public int pop() {
+		int popData = 0;
+		if (head == null) {
+			System.out.println("Stack over flow ");
+		}
+		popData = head.data;
+		head = head.next;
+		
+		return popData;
 		
 	}
 

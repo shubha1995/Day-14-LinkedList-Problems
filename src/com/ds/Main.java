@@ -12,7 +12,8 @@ public class Main {
 				+ "1. Create a simple LinkedList\n"
 				+ "2. Create Linked List by adding 30 and 56 to 70\n"
 				+ "3. Create Linked List by apending 30 and 70 to 56\n"
-				+ "4. Insert 30 between 56 & 70\n");
+				+ "4. Insert 30 between 56 & 70\n"
+				+ "5. Ability to delete the first element\n");
 
 		int option = sc.nextInt();
 		System.out.println();
@@ -35,27 +36,35 @@ public class Main {
 			linkedList.print();
 
 			break;
-			
+
 		case 3:
-			
+
 			linkedList.insert(56);
 			linkedList.insert(30);
 			linkedList.insert(70);
-			
+
 			linkedList.print();
-			
-			
+
+
+			break;
+
+		case 4:
+
+			LinkedList.Node prevNode = linkedList.insert(56);
+			linkedList.insert(70);
+
+			linkedList.insertAfter(prevNode,  30);
+
+
 			break;
 			
-		 case 4:
-             
-         	LinkedList.Node prevNode = linkedList.insert(56);
-         	linkedList.insert(70);
-         	
-         	linkedList.insertAfter(prevNode,  30);
-         		                	
-         	
-         	break;
+		case 5:
+        	linkedList.insert(56);
+        	linkedList.insert(30);
+        	linkedList.insert(70);
+        	int pop = linkedList.pop();
+        	System.out.println(pop);
+        	linkedList.print();
 
 
 		}
