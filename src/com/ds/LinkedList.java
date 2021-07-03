@@ -2,6 +2,7 @@ package com.ds;
 
 public class LinkedList {
 	Node head;	 
+	
 
 	class Node{
 		int data;
@@ -72,5 +73,26 @@ public class LinkedList {
 		
 	}
 
-}
+	public int search(int val) {
+		if (head == null) {
+			System.out.println("List is Empty");
+			return -1;
+			}
+			int index = 1;
+			Node newNode = head;
+			while (newNode != null) {
+			if (newNode.data == val) {
+			break;
+			}
+			index++;
+			newNode = newNode.next;
+			}
+			return index;
+		
+	}
 
+	
+		
+	}
+
+	

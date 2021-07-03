@@ -13,7 +13,9 @@ public class Main {
 				+ "2. Create Linked List by adding 30 and 56 to 70\n"
 				+ "3. Create Linked List by apending 30 and 70 to 56\n"
 				+ "4. Insert 30 between 56 & 70\n"
-				+ "5. Ability to delete the first element\n");
+				+ "5. Ability to delete the first element\n"
+				+ "6. Delete the last element in the LinkedList\n"
+				+ "7. Find node with value 30");
 
 		int option = sc.nextInt();
 		System.out.println();
@@ -65,7 +67,15 @@ public class Main {
         	int pop = linkedList.pop();
         	System.out.println(pop);
         	linkedList.print();
-
+        	
+        	break;
+		case 7:
+			linkedList.insert(56);
+        	linkedList.insert(30);
+        	linkedList.insert(70);
+			int search = linkedList.search(30);
+	    	System.out.println("Position of 30::"+search); 
+	
 
 		}
 	}
