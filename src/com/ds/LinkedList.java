@@ -108,8 +108,35 @@ public class LinkedList {
 			System.out.println("Delete last node::");
 
 		}
+
+	public void insertelement(int position, int data) {
+
+			Node node = new Node(data);
+
+			if (position == 1) {
+				node.next = head;
+				head = node;
+			} else {
+				Node previous = head;
+				int count = 1; // position - 1
+
+				while (count < position - 1) {
+					previous = previous.next;
+					count++;
+				}
+
+				Node temp = previous.next;
+				previous.next = node;
+				node.next = temp;
+			}
+
+		}
 		
 	}
+
+	
+		
+
 
 	
 		
