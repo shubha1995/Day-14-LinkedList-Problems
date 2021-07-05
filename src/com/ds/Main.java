@@ -69,6 +69,15 @@ public class Main {
         	linkedList.print();
         	
         	break;
+        	
+		case 6: 
+			linkedList.insert(56);
+			linkedList.insert(30);
+			linkedList.insert(70);
+			linkedList.popLast();
+
+			linkedList.print();
+			break;
 		case 7:
 			linkedList.insert(56);
         	linkedList.insert(30);
